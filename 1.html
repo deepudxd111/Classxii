@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Code Showcase</title>
+    <title>Program 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             padding: 20px;
+            margin: 0;
         }
-        h1 {
-            text-align: center;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 20px;
+            background-color: #eaeaea;
+            padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
         }
-        code {
-            font-family: Consolas, "Courier New", monospace;
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #000000;
         }
     </style>
 </head>
 <body>
-
-    <h1>My Python Code</h1>
-
-    <pre><code>
+    <div class="container">
+        <h1>Program 1</h1>
+        <pre><code>
 def add(x, y):
     return x + y
 
@@ -72,8 +85,9 @@ while True:
     next_calculation = input("Do you want to perform another calculation? (yes/no): ")
     if next_calculation.lower() != 'yes':
         break
-
-    </code></pre>
-
+            
+        </code></pre>
+        <a class="back-link" href="index.html">Back to Programs List</a>
+    </div>
 </body>
 </html>
