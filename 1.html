@@ -1,43 +1,45 @@
-def add(x, y):
-    return x + y
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
 
-def subtract(x, y):
-    return x - y
+    <h1>My Python Code</h1>
 
-def multiply(x, y):
-    return x * y
+    <pre><code>
+# Your Python code goes here
+import math
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    else:
-        return x / y
+def calculate_circle_area(radius):
+    return math.pi * (radius ** 2)
 
-print("Select operation:")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiply")
-print("4. Divide")
+radius = 5
+area = calculate_circle_area(radius)
+print(f"The area of a circle with radius {radius} is {area}")
+    </code></pre>
 
-while True:
-    choice = input("Enter choice (1/2/3/4): ")
-    
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
-    
-    if choice == '1':
-        print(f"The result is: {add(num1, num2)}")
-    elif choice == '2':
-        print(f"The result is: {subtract(num1, num2)}")
-    elif choice == '3':
-        print(f"The result is: {multiply(num1, num2)}")
-    elif choice == '4':
-        print(f"The result is: {divide(num1, num2)}")
-    else:
-        print("Invalid Input")
-    
-    # Check if the user wants to perform another calculation
-    c= input("Do you want to perform another calculation? (Y/N): ")
-    if c != 'yes':
-        break
-        
+</body>
+</html>
