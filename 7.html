@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Program 7</h1>
+        <h4>Q:Write a program to check whether a number is prime or not?</h1>
+        <pre><code>def prime(n):
+    count = 0
+    
+    for i in range(1,n+1):
+        if i%2==0:
+            count+=1
+    if count==2:
+        print(n, "is a prime number")
+    else:
+        print(n, "is not a prime number")
+    
+
+num = int(input("Enter a number:"))
+prime(num)
+
+</code></pre>
+        <a class="back-link" href="index.html">Back to Programs List</a>
+    </div>
+</body>
+</html>
