@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Program 9</h1>
+        <h4>Q:Write a program to read content in a text file story.txt and count number of uppercase, lowercase, special characters and digits in it</h1>
+        <pre><code>def count_chars():
+    upper = 0
+    lower = 0
+    digits = 0
+    special = 0
+    
+    f = open('story.txt', 'r')
+    text = f.read()
+    
+    for i in text:
+        if i.isupper():
+            upper += 1
+        elif i.islower():
+            lower += 1
+        elif i.isdigit():
+            digits += 1
+        elif not i.isspace():
+            special += 1
+    f.close()
+
+    print("Uppercase letters:", upper)
+    print("Lowercase letters:", lower)
+    print("Digits:", digits)
+    print("Special characters:", special)
+
+count_chars()
+</code></pre>
+        <a class="back-link" href="index.html">Back to Programs List</a>
+    </div>
+</body>
+</html>
