@@ -1,0 +1,44 @@
+import pickle
+def addemprecord():
+        code=int(input("enter code:"))
+        name = input("Enter name:")
+        dept=input("Enter department name:")
+        salary = int(input("Enter salary:"))
+        data = [code, name, dept, salary]
+        f=open("emp.dat", "ab")
+        pickle.dump(data, f)
+        f.close()
+
+
+def searchemprecord():
+    f=open("emp.dat","rb")
+    rno=int(input("enter code to search"))
+    flag=0
+    try:
+        while True:
+            record=pickle.load(f)
+            if record[0]==rno:
+                print("Record found")
+                print(f"Code: {record[0]}")
+                print(f"Name: {record[1]}")
+                print(f"Salary: {record[2]}")
+                flag=1
+                break
+        
+    except EOFError:
+        pass
+    if flag==0:
+            print("Record not found")
+    f.close()
+
+
+while True:
+    ch=int(input("Enter 1.add employee\n2.Search employee\n4.exit\n"))
+    if ch==1:
+        addemprecord()
+    elif ch==2:
+        searchemprecord()
+    elif ch==4:
+        break
+    else:
+        print("Invalid choice")
